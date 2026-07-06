@@ -1,0 +1,184 @@
+/* ============================================
+   src/components/ExpenseCard.css
+   EXPENSE CARD STYLES
+   Horizontal card with category color coding
+   ============================================ */
+
+.expense-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100);
+  margin-bottom: var(--spacing-md);
+  transition: all 0.25s ease;
+  animation: slideInRight 0.4s ease;
+  gap: var(--spacing-md);
+}
+
+.expense-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gray-200);
+}
+
+/* ==========================================
+   LEFT SECTION
+   ========================================== */
+.expense-card-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex: 1;
+  min-width: 0; /* Allows text truncation */
+}
+
+/* ==========================================
+   CATEGORY BADGE
+   ========================================== */
+.category-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  min-width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.category-icon {
+  font-size: 1.5rem;
+}
+
+.category-name {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Category color variants */
+.category-food { background: #fef3c7; color: #92400e; }
+.category-transport { background: #dbeafe; color: #1e3a8a; }
+.category-entertainment { background: #fce7f3; color: #9d174d; }
+.category-utilities { background: #d1fae5; color: #065f46; }
+.category-shopping { background: #ede9fe; color: #5b21b6; }
+.category-healthcare { background: #fee2e2; color: #991b1b; }
+.category-education { background: #e0e7ff; color: #3730a3; }
+.category-other { background: #f1f5f9; color: #334155; }
+
+/* ==========================================
+   EXPENSE INFO
+   ========================================== */
+.expense-info {
+  min-width: 0;
+}
+
+.expense-title {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expense-description {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expense-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+/* ==========================================
+   RIGHT SECTION
+   ========================================== */
+.expense-card-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-shrink: 0;
+}
+
+.expense-amount {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  white-space: nowrap;
+}
+
+.expense-amount.negative {
+  color: var(--color-danger);
+}
+
+.expense-amount.positive {
+  color: var(--color-success);
+}
+
+.expense-view-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-gray-50);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.expense-view-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.expense-view-btn .arrow {
+  transition: transform var(--transition-fast);
+}
+
+.expense-view-btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 640px) {
+  .expense-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expense-card-right {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .category-badge {
+    flex-direction: row;
+    min-width: auto;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .category-icon {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,63 @@
+.settings-page {
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.5s ease;
+}
+
+.settings-section h3 {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-gray-50);
+}
+
+.setting-label {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.setting-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  margin-top: 2px;
+}
+
+/* Toggle switch */
+.toggle {
+  width: 48px;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--color-gray-300);
+  position: relative;
+  transition: background var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.toggle.active {
+  background: var(--color-primary);
+}
+
+.toggle-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.toggle.active .toggle-dot {
+  transform: translateX(22px);
+}

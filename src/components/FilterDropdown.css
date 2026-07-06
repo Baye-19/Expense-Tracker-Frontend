@@ -1,0 +1,49 @@
+/* ============================================
+   src/components/FilterDropdown.css
+   FILTER DROPDOWN STYLES
+   ============================================ */
+
+.filter-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.filter-label {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  white-space: nowrap;
+}
+
+.filter-select {
+  appearance: none;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  background: var(--color-white);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 140px;
+}
+
+.filter-select:hover {
+  border-color: var(--color-gray-300);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.filter-arrow {
+  position: absolute;
+  right: 0.75rem;
+  font-size: 0.6rem;
+  color: var(--color-gray-400);
+  pointer-events: none;
+}
