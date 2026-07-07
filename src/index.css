@@ -1,17 +1,17 @@
 
 :root {
   /* Primary brand colors */
-  --color-primary: #6366f1;        /* Indigo-500 */
-  --color-primary-hover: #4f46e5;  /* Indigo-600 */
-  --color-primary-light: #e0e7ff;  /* Indigo-100 */
+  --color-primary: #6366f1;       
+  --color-primary-hover: #4f46e5;  
+    --color-primary-light: #e0e7ff;
 
   /* Semantic colors */
-  --color-success: #10b981;        /* Emerald-500 */
-  --color-success-light: #d1fae5;  /* Emerald-100 */
-  --color-danger: #ef4444;         /* Red-500 */
-  --color-danger-light: #fee2e2;   /* Red-100 */
-  --color-warning: #f59e0b;        /* Amber-500 */
-  --color-warning-light: #fef3c7;  /* Amber-100 */
+  --color-success: #10b981;        
+  --color-success-light: #d1fae5;  
+  --color-danger: #ef4444;        
+  --color-danger-light: #fee2e2;   
+  --color-warning: #f59e0b;        
+  --color-warning-light: #fef3c7;  
 
   /* Neutral colors */
   --color-gray-50: #f9fafb;
@@ -82,8 +82,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   
-  /* Test with a visible color */
-  background-color: #ffeb3b;  /* Bright yellow */
+  
+  background-color: #ffeb3b;  
 }
 /* Remove default link styling */
 a {

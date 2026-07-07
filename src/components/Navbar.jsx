@@ -1,14 +1,3 @@
-// ============================================
-// src/components/Navbar.jsx
-// NAVIGATION BAR
-// Shows at the top of every page. Responsive
-// with a hamburger menu on mobile. Content
-// changes based on whether user is logged in.
-//
-// KEY CONCEPT: Conditional Rendering
-// We use logical && and ternary operators to
-// show/hide elements based on state.
-// ============================================
 
 import { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
@@ -16,16 +5,13 @@ import { useAuth } from '../context/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
-  // ==========================================
   // STATE & HOOKS
-  // ==========================================
+ 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { isAuthenticated, user, logout } = useAuth();
   const navigate = useNavigate();
 
-  // ==========================================
   // HANDLERS
-  // ==========================================
   
   // Logout handler: logs out and redirects to home
   const handleLogout = () => {
@@ -44,24 +30,18 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // ==========================================
   // HELPER: Get user's first name for greeting
-  // ==========================================
+
   const getFirstName = () => {
     if (!user?.name) return 'User';
     return user.name.split(' ')[0];
   };
 
-  // ==========================================
   // RENDER
-  // ==========================================
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* ====================================
-            LOGO
-            Always visible, links to home page
-            ==================================== */}
+  
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <span className="logo-icon">💰</span>
           <span className="logo-text">ExpenseTracker</span>

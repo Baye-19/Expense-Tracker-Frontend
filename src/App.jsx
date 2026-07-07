@@ -14,8 +14,9 @@ import ExpenseDetails from './pages/ExpenseDetails';
 import Reports from './pages/Reports';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
-import NotFound from './pages/NotFound';
 import SetBudget from './pages/SetBudget';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -36,9 +37,13 @@ function AppContent() {
       <Navbar />
       <main className="main-content">
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/set-budget" element={<SetBudget />} />
@@ -49,6 +54,8 @@ function AppContent() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />
           </Route>
+
+          {/* 404 Page */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

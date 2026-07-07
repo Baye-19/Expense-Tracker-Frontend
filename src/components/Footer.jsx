@@ -55,7 +55,7 @@ const Footer = () => {
             <ul>
               <li><Link to="/profile">Profile</Link></li>
               <li><Link to="/settings">Settings</Link></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
               <li><a href="#privacy">Privacy Policy</a></li>
             </ul>
           </div>
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>© {currentYear} ExpenseTracker. All rights reserved.</p>
           <p className="footer-tagline">
-            Built with ❤️ using React & Vite
+            Built By Baye Nigus
           </p>
         </div>
       </div>

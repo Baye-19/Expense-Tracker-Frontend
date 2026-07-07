@@ -77,7 +77,7 @@ const Home = () => {
             ) : (
               <>
                 <Link to="/register" className="btn btn-primary btn-lg">
-                  🚀 Get Started Free
+                  🚀 Get Started 
                 </Link>
                 <Link to="/login" className="btn btn-outline btn-lg">
                   🔑 Sign In
@@ -178,11 +178,11 @@ const Home = () => {
       <section className="stats-section">
         <div className="stats-grid-home">
           <div className="stat-item">
-            <span className="stat-number">10K+</span>
+            <span className="stat-number">5K+</span>
             <span className="stat-label">Active Users</span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">$50M+</span>
+            <span className="stat-number">$20M+</span>
             <span className="stat-label">Transactions Tracked</span>
           </div>
           <div className="stat-item">
@@ -201,7 +201,7 @@ const Home = () => {
         <p>Join thousands of users who are taking control of their finances today.</p>
         {!isAuthenticated && (
           <Link to="/register" className="btn btn-primary btn-lg">
-            ✨ Create Free Account
+            ✨ Create Account
           </Link>
         )}
       </section>

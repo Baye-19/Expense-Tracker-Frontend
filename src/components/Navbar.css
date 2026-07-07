@@ -272,4 +272,29 @@
   .mobile-menu {
     display: none !important;
   }
+  .logo-icon, .logo-text {
+    font-size: 28px;
+    margin-left: 8px;
+  }
+  
+  .navbar-links {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1700px;
+  
+  padding: 0px 2rem;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  gap: 0px;
+}
+  .nav-links {
+     font-size: 18px; 
+  }
 }
