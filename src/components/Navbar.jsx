@@ -73,17 +73,32 @@ const Navbar = () => {
               {/* User dropdown area */}
               <div className="nav-user-section">
                 <NavLink to="/profile" className="nav-link nav-user-link">
-                  <div className="user-avatar">
-                    {getFirstName().charAt(0).toUpperCase()}
-                  </div>
-                  <span>{getFirstName()}</span>
-                </NavLink>
+                    {user?.profileImage ? (
+                      <img 
+                        src={user.profileImage} 
+                        alt={getFirstName()}
+                        className="user-avatar-img"
+                        style={{
+                          width: '32px',
+                          height: '32px',
+                          borderRadius: '50%',
+                          objectFit: 'cover',
+                          border: '2px solid #e0e7ff'
+                        }}
+                      />
+                    ) : (
+                      <div className="user-avatar">
+                        {getFirstName().charAt(0).toUpperCase()}
+                      </div>
+                    )}
+                    <span>{getFirstName()}</span>
+                  </NavLink>
                 <button 
                   onClick={handleLogout} 
                   className="btn btn-ghost btn-sm nav-logout-btn"
                   title="Logout"
                 >
-                  🚪
+                  Logout🚪
                 </button>
               </div>
             </>
@@ -134,7 +149,7 @@ const Navbar = () => {
             <NavLink to="/reports" className="mobile-link" onClick={closeMobileMenu}>
               📈 Reports
             </NavLink>
-            <NavLink to="/profile" className="mobile-link" onClick={closeMobileMenu}>
+            <NavLink to="/profile" className="mobile-link" onClick={() => setMobileMenu(false)}>
               👤 Profile
             </NavLink>
             <NavLink to="/settings" className="mobile-link" onClick={closeMobileMenu}>

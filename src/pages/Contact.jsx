@@ -77,7 +77,7 @@ const Contact = () => {
                     type="text"
                     name="name"
                     className={`form-control ${errors.name ? 'error' : ''}`}
-                    placeholder="John Doe"
+                    placeholder="Baye Nigus"
                     value={formData.name}
                     onChange={handleChange}
                   />

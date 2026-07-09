@@ -32,12 +32,8 @@ const handleSubmit = async (e) => {
   setIsSubmitting(false);
 
   if (result.success) {
-    if (result.hasBudget === false) {
-      navigate('/set-budget', { replace: true });
-    } else {
-      navigate('/dashboard', { replace: true });
-    }
-  } else {
+    navigate('/dashboard', { replace: true });
+  }else {
     setErrors({ form: result.error });
   }
 };
