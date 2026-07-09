@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
                   type="text"
                   name="name"
                   className={`form-control input-with-icon ${errors.name ? 'error' : ''}`}
-                  placeholder="John Doe"
+                  placeholder="Baye Nigus"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={isSubmitting}
