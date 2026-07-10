@@ -1,63 +1,128 @@
+/* src/pages/Settings.css */
 .settings-page {
   max-width: 700px;
   margin: 0 auto;
   animation: fadeInUp 0.5s ease;
 }
 
+.settings-section {
+  margin-bottom: 1.5rem;
+}
+
 .settings-section h3 {
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-md);
-  border-bottom: 1px solid var(--color-gray-100);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 1.1rem;
+  color: #111827;
 }
 
 .setting-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) 0;
-  border-bottom: 1px solid var(--color-gray-50);
+  padding: 1rem 0;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
 }
 
 .setting-label {
   font-weight: 600;
-  font-size: var(--font-size-sm);
+  font-size: 0.9rem;
+  color: #374151;
 }
 
 .setting-desc {
-  font-size: var(--font-size-xs);
-  color: var(--color-gray-500);
-  margin-top: 2px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
 }
 
-/* Toggle switch */
+/* Toggle Switch */
 .toggle {
-  width: 48px;
-  height: 26px;
-  border-radius: 13px;
-  background: var(--color-gray-300);
+  width: 52px;
+  height: 28px;
+  border-radius: 14px;
+  background: #d1d5db;
   position: relative;
-  transition: background var(--transition-fast);
+  transition: background 0.3s ease;
   cursor: pointer;
   border: none;
   padding: 0;
+  flex-shrink: 0;
+}
+
+.toggle:hover {
+  opacity: 0.9;
 }
 
 .toggle.active {
-  background: var(--color-primary);
+  background: #6366f1;
 }
 
 .toggle-dot {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: white;
   position: absolute;
   top: 2px;
   left: 2px;
-  transition: transform var(--transition-fast);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .toggle.active .toggle-dot {
-  transform: translateX(22px);
+  transform: translateX(24px);
+}
+
+/* Save Message */
+.settings-save-message {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .setting-item .btn,
+  .setting-item .toggle {
+    align-self: flex-start;
+  }
 }

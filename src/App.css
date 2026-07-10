@@ -11,15 +11,19 @@
    flex: 1 makes this grow to fill available space
    pushing the footer down
    ========================================== */
+
+
+   /* to have a good background image for the home page, we can use the hero class to style the main content area. The hero class will have a background image, and we can use flexbox to center the content within it. We can also add some padding and margin to create space around the content. */
 .hero-content {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 10rem;
+    padding: 0 8rem;
+   /* image-rendering: blur(1px);  */
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 4rem;
-}
+} 
 
 /* ==========================================
    LOADING SCREEN
