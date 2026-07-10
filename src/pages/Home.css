@@ -61,10 +61,11 @@
 
 .hero-subtitle {
   font-size: var(--font-size-xl);
-  color: var(--color-gray-500);
+  --color-black-500: #0f2d5a; 
   line-height: 1.6;
   margin-bottom: var(--spacing-xl);
   max-width: 500px;
+  
 }
 
 .hero-actions {
