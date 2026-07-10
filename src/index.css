@@ -66,9 +66,23 @@
   --transition-normal: 250ms ease;
 }
 
+.hero {
+    width: 100%;
+     min-height: calc(200vh - 80px);
+
+    background-image: url("/money.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* CSS Reset - removes all browser default styling */
 *,
-*::before,
+/* *::before, */
 *::after {
   box-sizing: border-box;
   margin: 0;
@@ -81,8 +95,6 @@ body {
   color: var(--color-gray-800);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  
-  
   background-color: #ffeb3b;  
 }
 /* Remove default link styling */

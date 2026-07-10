@@ -1,25 +1,8 @@
-// ============================================
-// src/components/ExpenseCard.jsx
-// EXPENSE CARD COMPONENT
-// Displays a summary of a single expense.
-// Used in lists like "Recent Transactions"
-// on the Dashboard.
-//
-// KEY CONCEPT: Lists and Keys
-// When this component is used in a .map(),
-// React needs a unique "key" prop on each
-// ExpenseCard to efficiently update the list.
-// ============================================
 
 import { Link } from 'react-router-dom';
 import './ExpenseCard.css';
 
 const ExpenseCard = ({ expense }) => {
-  // ==========================================
-  // Destructure all fields we need from expense
-  // This makes the code cleaner than writing
-  // expense.title, expense.amount, etc.
-  // ==========================================
   const { 
     id, 
     title, 
@@ -30,20 +13,12 @@ const ExpenseCard = ({ expense }) => {
     description 
   } = expense;
 
-  // ==========================================
-  // Format the date to a readable string
-  // e.g., "June 25, 2026"
-  // ==========================================
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   });
 
-  // ==========================================
-  // Get the emoji icon for each category
-  // This makes categories visually distinct
-  // ==========================================
   const categoryIcons = {
     Food: '🍔',
     Transport: '🚗',
@@ -55,10 +30,6 @@ const ExpenseCard = ({ expense }) => {
     Other: '📌',
   };
 
-  // ==========================================
-  // Get color class for category badge
-  // This maps to CSS classes in ExpenseCard.css
-  // ==========================================
   const categoryClass = category.toLowerCase().replace(/\s+/g, '-');
 
   return (
@@ -106,14 +77,5 @@ const ExpenseCard = ({ expense }) => {
     </div>
   );
 };
-
-// ============================================
-// WHAT YOU LEARNED:
-// 1. Destructuring props for cleaner code
-// 2. Date formatting with toLocaleDateString
-// 3. Dynamic CSS classes based on data
-// 4. Using Link for navigation with dynamic URLs
-// 5. Objects as lookup tables (categoryIcons)
-// ============================================
 
 export default ExpenseCard;

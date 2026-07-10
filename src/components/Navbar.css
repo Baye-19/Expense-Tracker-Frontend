@@ -1,14 +1,4 @@
-/* ============================================
-   src/components/Navbar.css
-   NAVIGATION BAR STYLES
-   Sticky navbar with glassmorphism effect,
-   responsive mobile menu, and smooth animations
-   ============================================ */
 
-/* ==========================================
-   NAVBAR CONTAINER
-   Sticks to top with backdrop blur effect
-   ========================================== */
 .navbar {
   position: sticky;
   top: 0;

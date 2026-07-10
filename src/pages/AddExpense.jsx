@@ -1,5 +1,3 @@
-// src/pages/AddExpense.jsx (UPDATED)
-// Now uses global ExpenseContext
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

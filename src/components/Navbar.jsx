@@ -47,15 +47,12 @@ const Navbar = () => {
           <span className="logo-text">ExpenseTracker</span>
         </Link>
 
-        {/* ====================================
-            DESKTOP NAVIGATION
-            Hidden on mobile, shown on desktop
-            ==================================== */}
+        {/* DESKTOP NAVIGATION
+            Hidden on mobile, shown on desktop */}
         <div className="navbar-links">
           {isAuthenticated ? (
-            // ================================
+            
             // LOGGED-IN LINKS
-            // ================================
             <>
               <NavLink to="/dashboard" className="nav-link">
                 <span className="nav-icon">📊</span>
@@ -103,9 +100,8 @@ const Navbar = () => {
               </div>
             </>
           ) : (
-            // ================================
+        
             // GUEST LINKS
-            // ================================
             <>
               <NavLink to="/login" className="nav-link">
                 Login
@@ -117,10 +113,10 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* ====================================
+        {/* 
             MOBILE HAMBURGER BUTTON
             Only visible on small screens
-            ==================================== */}
+             */}
         <button 
           className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={toggleMobileMenu}
@@ -133,10 +129,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* ====================================
+      {/* 
           MOBILE MENU
           Slides down when hamburger is clicked
-          ==================================== */}
+           */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         {isAuthenticated ? (
           <>

@@ -1,22 +1,16 @@
-/* ============================================
-   src/pages/Home.css
-   HOME PAGE STYLES
-   ============================================ */
+
 
 .home {
   animation: fadeIn 0.5s ease;
 }
 
-/* ==========================================
-   HERO SECTION
-   ========================================== */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-2xl);
+  gap: 150px;
   align-items: center;
   padding: var(--spacing-2xl) 0;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 100px);
 }
 
 .hero-content {

@@ -1,7 +1,3 @@
-// src/pages/ExpenseDetails.jsx
-// EXPENSE DETAILS – now uses global ExpenseContext
-// Always shows the latest data, even after edits
-
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useExpenses } from '../context/ExpenseContext'; // ← GLOBAL CONTEXT

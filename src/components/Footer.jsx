@@ -1,9 +1,3 @@
-// ============================================
-// src/components/Footer.jsx
-// FOOTER COMPONENT
-// Simple footer that appears at the bottom of
-// every page. Shows copyright and links.
-// ============================================
 
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';

@@ -1,7 +1,3 @@
-// src/pages/EditExpense.jsx
-// EDIT EXPENSE – now uses global ExpenseContext
-// Any changes here will immediately show on the Dashboard
-
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useExpenses } from '../context/ExpenseContext'; // ← GLOBAL CONTEXT
@@ -33,9 +29,7 @@ const EditExpense = () => {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
-  // ==========================================
   // LOAD EXPENSE FROM GLOBAL CONTEXT
-  // ==========================================
   useEffect(() => {
     const expense = getExpenseById(id);
 
@@ -111,9 +105,7 @@ const EditExpense = () => {
     navigate('/dashboard');
   };
 
-  // ==========================================
   // LOADING STATE
-  // ==========================================
   if (loading) {
     return (
       <div className="add-expense-page">
@@ -125,9 +117,7 @@ const EditExpense = () => {
     );
   }
 
-  // ==========================================
   // NOT FOUND STATE
-  // ==========================================
   if (notFound) {
     return (
       <div className="add-expense-page">
@@ -145,9 +135,7 @@ const EditExpense = () => {
     );
   }
 
-  // ==========================================
   // RENDER FORM
-  // ==========================================
   return (
     <div className="add-expense-page">
       <div className="page-header">
