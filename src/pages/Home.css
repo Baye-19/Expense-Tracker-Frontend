@@ -15,8 +15,8 @@
 .hero-content {
     width: 100%;
     max-width: 1280px;
-    margin: 0 0 0 40px;
-    padding: 0 0 0 80px;
+    margin: 0 auto;
+    padding: 0 4rem 0 rem;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 2rem;
