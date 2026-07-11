@@ -336,7 +336,7 @@
     font-size: 2rem;
   }
 
- .hero-content {
+ /* .hero-content {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -344,7 +344,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     
-}
+} */
 }
 /* @media (max-width: 576px) {
    .hero-content {
