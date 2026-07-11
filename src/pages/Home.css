@@ -363,10 +363,10 @@
   .hero-content {
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 0 0 40px;
     /* padding: 0 15px 0 18px; */
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 2rem;
+    
 }
 }
