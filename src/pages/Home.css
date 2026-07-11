@@ -338,9 +338,13 @@
 
  .hero-content {
     width: 100%;
-    max-width: 100%;
-    padding: 0 5px;
-   }
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4rem 0 rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+}
 }
 /* @media (max-width: 576px) {
    .hero-content {
