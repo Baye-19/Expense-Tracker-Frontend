@@ -347,19 +347,6 @@
 }
 }
 @media (max-width: 576px) {
-  .hero-title {
-    font-size: 1.75rem;
-  }
-
-  .hero-subtitle {
-    font-size: var(--font-size-md);
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
   .hero-content {
     width: 100%;
     max-width: 1280px;
